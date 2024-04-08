@@ -1,4 +1,4 @@
-# Proyecto de Data sobre Carritos Abandonados
+# Proyecto Carritos Abandonados
 
 Este proyecto tiene como objetivo analizar el comportamiento de los usuarios en un e-commerce para identificar y comprender los carritos abandonados. A través de la recopilación, transformación y análisis de datos, buscamos obtener información valiosa que pueda utilizarse para mejorar la experiencia del usuario y aumentar las conversiones.
 
