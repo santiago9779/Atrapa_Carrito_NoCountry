@@ -19,11 +19,11 @@ Este proyecto tiene como objetivo analizar el comportamiento de los usuarios en 
 
 ## Mockup del Dashboard
 
-![Mockup del Dashboard](assets\Mockup_dashboard_carritos.pdf)
+![Mockup del Dashboard]("assets\Mockup_dashboard_carritos.pdf")
 
 ## Stack Tecnológico
 
-![Stack Tecnológico](assets\Stack Tecnológico.png)
+![Mockup del Dashboard](assets\Stack Tecnológico.png)
 
 ## ETL (Extracción, Transformación y Carga)
 
