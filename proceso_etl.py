@@ -2,7 +2,7 @@ import pandas as pd
 import mysql.connector
 import db_connect
 
-df = pd.read_excel("data_cart_abandonment.xlsx")
+df = pd.read_csv("rawdata\data_cart_abandonment.csv")
 
 columnas = list(df)
 
@@ -26,7 +26,6 @@ print(resultados)
 nombres_español = ['ID', 'Detalles_Del_Producto_Vistos', 'Cant_Actividades_De_Sesión', 'Nro_Articulos_En_Carrito', 'Nro_Articulos_Eliminados_Del_Carrito', 'Nro_Visualizaciones_Del_Carrito', 'Nro_Pago_Exitoso', 'Nro_Pago_Iniciado', 'Nro_Visualizaciones_Articulos__Carrito', 'Nro_Inicios_Sesion', 'Nro_Paginas_VistaS', 'Tipo_De_Cliente', 'Carrito_Abandonado' ]
 df.columns = nombres_español
 
-
 # Hago un mapeo de valores en la columna Detalles_Del_Producto_Vistos, pasando de Yes/No a 1/0
 df['Detalles_Del_Producto_Vistos'] = df['Detalles_Del_Producto_Vistos'].replace({'Yes': 1, 'No': 0})
 
@@ -38,12 +37,23 @@ df['Nro_Articulos_En_Carrito'].fillna(mediana_articulos, inplace=True)
 mediana_visualizaciones = df['Nro_Visualizaciones_Del_Carrito'].median()
 df['Nro_Visualizaciones_Del_Carrito'].fillna(mediana_visualizaciones, inplace=True)
 
-
 ## Cambio el tipo de dato float a int en las columnas Nro_Articulos_En_Carrito y Nro_Visualizaciones_Del_Carrito
 float_a_int = ['Nro_Articulos_En_Carrito', 'Nro_Visualizaciones_Del_Carrito']
 df[float_a_int]= df[float_a_int].astype(int)
 
+# Elimino la columna de pagos exitosos, ya que no nos aporta nada de información (es inversamente proporcional a carrito abandonado)
+df = df.drop('Nro_Pago_Exitoso', axis=1)
+
+# Incremento en uno todos los registros de Nro_Paginas_Vistas
+df['Nro_Paginas_VistaS'] = df['Nro_Paginas_VistaS'].apply(lambda x: x + 1)
+
+# Eliminar los registros de 'Nro_Articulos_En_Carrito' que estén en 0 cuando 'Carrito_Abandonado' también es 0
+df = df.loc[~((df['Nro_Articulos_En_Carrito'] == 0) & (df['Carrito_Abandonado'] == 0))]
+
 df.info()
+
+# Pasar el df a excel
+df.to_excel("abandonment_cart_datos_procesados.xlsx", index=False)
 
 # Conectar a la base de datos
 #hecho en modulo db_connect
