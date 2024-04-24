@@ -47,6 +47,7 @@ El proyecto de análisis de carritos abandonados ha permitido al cliente obtener
 -**Dashboard interactivo con filtros:** Crear un dashboard interactivo que permita al Gerente de Ventas visualizar y analizar de forma dinámica el comportamiento de los clientes. Incluir filtros para segmentar datos por diferentes variables para obtener insights significativos.
 
 -[Mockup del Dashboard](assets/Mockup_dashboard_carritos.pdf)
+
 -[Link al dashboard](https://app.powerbi.com/view?r=eyJrIjoiNTA2ZmZiOGItMDZiZS00MTc5LWE5MzgtYTFmMDk4MmEyMzllIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
 ## Mockup del Dashboard
 
