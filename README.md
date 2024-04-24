@@ -21,6 +21,7 @@ Este proyecto se centra en el análisis de carritos abandonados con el objetivo 
 1. **Extracción de Datos**: Se utilizó un dataset sobre carritos abandonados como punto de partida para el proyecto.
    
 2. **Transformación y Carga de Datos (ETL)**: Se llevó a cabo un proceso de limpieza, transformación y preparación de los datos utilizando Python. Este paso fue fundamental para garantizar la calidad y coherencia de los datos utilizados en el análisis y modelado subsiguientes.
+- [`Proceso ETL`](proceso_etl.py)
 
 3. **Desarrollo del Modelo de Machine Learning**: Se construyó un modelo de machine learning capaz de predecir la probabilidad de abandono de un carrito por parte de un cliente. Este modelo se entrenó utilizando técnicas de aprendizaje supervisado y se evaluó su rendimiento para garantizar su eficacia.
 
@@ -49,9 +50,6 @@ El proyecto de análisis de carritos abandonados ha permitido al cliente obtener
 -[Mockup del Dashboard](assets/Mockup_dashboard_carritos.pdf)
 
 -[Link al dashboard](https://app.powerbi.com/view?r=eyJrIjoiNTA2ZmZiOGItMDZiZS00MTc5LWE5MzgtYTFmMDk4MmEyMzllIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
-## Mockup del Dashboard
-
-![Mockup del Dashboard](assets/Mockup_dashboard_carritos.pdf)
 
 ## Stack Tecnológico
 
