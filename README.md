@@ -55,10 +55,6 @@ El proyecto de análisis de carritos abandonados ha permitido al cliente obtener
 
 ![Stack tecnológico](assets/Stack%20Tecnológico.png)
 
-## ETL (Extracción, Transformación y Carga)
-
-El archivo [`proceso_etl.py`](proceso_etl.py) en este repositorio contiene el código necesario para llevar a cabo el proceso ETL. Este script se encarga de extraer datos relevantes, transformarlos según sea necesario y cargarlos en una base de datos para su posterior análisis.
-
 ## Raw Data
 
 La carpeta `rawdata` contiene el dataset en bruto que utilizaremos para este proyecto.
